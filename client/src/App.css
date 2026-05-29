@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #0f172a
+  );
+  color: white;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  background: linear-gradient(
+    90deg,
+    #38bdf8,
+    #818cf8,
+    #ec4899
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.message {
+  padding: 14px 18px;
+  border-radius: 18px;
+  max-width: 75%;
+  line-height: 1.6;
+  animation: fadeIn 0.3s ease;
+}
+
+.user {
+  align-self: flex-end;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #7c3aed
+  );
+
+  color: white;
+
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
+}
+
+.ai {
+  align-self: flex-start;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(10px);
+
+  color: #f8fafc;
+}
+
+.input-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.input-box {
+  flex: 1;
+
+  padding: 14px 16px;
+
+  border-radius: 15px;
+
+  border: none;
+
+  outline: none;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+
+  font-size: 16px;
+
+  backdrop-filter: blur(10px);
+}
+
+.input-box::placeholder {
+  color: #94a3b8;
+}
+
+.send-btn {
+  padding: 14px 25px;
+
+  border: none;
+
+  border-radius: 15px;
+
+  cursor: pointer;
+
+  font-weight: bold;
+
+  color: white;
+
+  background: linear-gradient(
+    135deg,
+    #06b6d4,
+    #8b5cf6
+  );
+
+  transition: all 0.3s ease;
+}
+
+.send-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+.chat-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
