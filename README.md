@@ -57,7 +57,7 @@ node server.js
 * User authentication
 * Dark/Light mode
 * Typing indicator
-* Deployment on Vercel and Render
+
 
 ## 👩‍💻 Author
 
