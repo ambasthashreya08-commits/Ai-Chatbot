@@ -97,7 +97,7 @@ function App() {
         <input
           className="input-box"
           type="text"
-          placeholder="Ask anything..."
+          placeholder="Ask me anything..."
           value={input}
           onChange={(e) =>
             setInput(e.target.value)
